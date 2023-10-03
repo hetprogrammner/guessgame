@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script>
+      function refresh() {
+        location.reload()
+      }
+      function genRan() {
+        return Math.floor(Math.random() * 200 + 1);
+      }
+      let atm = 0;
+      let num = genRan();
+      console.log(num)
+      function guess() {
+        atm++;
+        inp = document.getElementById("inp").value;
+        if (atm <= 5) {
+          if (inp == num) {
+            document.getElementById('body').style.backgroundColor = 'yellow';
+            document.getElementById('out').innerHTML = `<button type="reset" onclick="refresh();">New Game</button><br /><br />Congrats You got it in ${atm} try.`;
+            
+        }
+    }
+    else{
+        document.getElementById('body').style.backgroundColor = 'red';
+
+            document.getElementById("btn").disabled = true;
+        
+            document.getElementById('out').innerHTML = `<button type="reset" onclick="refresh();">New Game</button><br /><br />You lost all 5 tries.`;
+        }
+      }
+    </script>
+  </head>
+  <body id="body">
+    <center>
+      <br />
+      <div>
+        <input type="number" name="" id="inp" />
+      </div>
+      <br />
+      <div id="out">
+        <button type="button" onclick="guess()" id="btn">Guess</button>
+      </div>
+    </center>
+  </body>
+</html>
