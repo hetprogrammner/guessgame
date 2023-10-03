@@ -7,7 +7,7 @@
     <style></style>
     <script>
       function refresh() {
-        location.reload()
+        location.reload();
       }
       function genRan() {
         return Math.floor(Math.random() * 200 + 1);
@@ -17,11 +17,11 @@
       console.log(num)
       function guess() {
         atm++;
-        inp = document.getElementById("inp").value;
+        input = document.getElementById("inp").value;
         if (atm <= 5) {
-          if (inp == num) {
+          if (input == num) {
             document.getElementById('body').style.backgroundColor = 'yellow';
-            document.getElementById('out').innerHTML = `<button type="reset" onclick="refresh();">New Game</button><br /><br />Congrats You got it in ${atm} try.`;
+            document.getElementById('out').innerHTML = `<button type="reset" onclick="refresh();">New Game</button><br /><br />Congrats You got it in ${atm}th try.`;
             
         }
     }
