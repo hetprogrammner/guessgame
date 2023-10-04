@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style></style>
     <script>
       function refresh() {
         location.reload();
       }
-      function genRan() {
+      function genRandom() {
         return Math.floor(Math.random() * 200 + 1);
       }
       let atm = 0;
-      let num = genRan();
-      console.log(num)
+      let num = genRandom();
+      
       function guess() {
         atm++;
         input = document.getElementById("inp").value;
